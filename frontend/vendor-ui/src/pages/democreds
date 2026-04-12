@@ -1,0 +1,5 @@
+        <!-- user = admin,pass= admin123 -> ADMIN dashboard 
+        user = vendor,pass= vendor123 -> VENDOR dashboard
+        user =  procurement pass = proc123 -> PROCUREMENT_OFFICER dashboard 
+        user = legal pass =legal123 -> LEGAL_TEAM
+        user = finance,pass = fin123 -> FINANCE_TEAM dashboard -->
