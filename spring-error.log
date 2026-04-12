@@ -536,3 +536,14 @@ Caused by: java.lang.ClassNotFoundException: VendorPerformanceLog
 2026-04-12T16:22:27.002+05:30  INFO 40380 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@3e584ff0
 2026-04-12T16:22:27.004+05:30  INFO 40380 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
 2026-04-12T16:22:27.722+05:30  INFO 40380 --- [restartedMain] com.HCl.VOCLMS.VoclmsApplication         : Started VoclmsApplication in 1.594 seconds (process running for 258.845)
+2026-04-12T16:31:05.862+05:30  INFO 32152 --- [restartedMain] com.HCl.VOCLMS.VoclmsApplication         : Starting VoclmsApplication using Java 25.0.2 with PID 32152 (C:\Users\lavur\Downloads\VOCLMS-main\VOCLMS-main\target\classes started by lavur in C:\Users\lavur\Downloads\VOCLMS-main\VOCLMS-main)
+2026-04-12T16:31:05.918+05:30  INFO 32152 --- [restartedMain] com.HCl.VOCLMS.VoclmsApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-04-12T16:31:19.167+05:30  INFO 32152 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-12T16:31:19.170+05:30  INFO 32152 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-12T16:31:24.539+05:30  INFO 32152 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-12T16:31:24.958+05:30  INFO 32152 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5fc18fd4
+2026-04-12T16:31:24.961+05:30  INFO 32152 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-12T16:31:30.511+05:30  INFO 32152 --- [restartedMain] com.HCl.VOCLMS.VoclmsApplication         : Started VoclmsApplication in 27.176 seconds (process running for 30.27)
+2026-04-12T16:32:39.078+05:30  INFO 32152 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-12T16:33:25.091+05:30  INFO 32152 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-12T16:33:25.096+05:30  INFO 32152 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
