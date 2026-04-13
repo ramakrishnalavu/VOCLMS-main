@@ -33,7 +33,7 @@ const PaymentTerms = () => {
       paymentTerm: editTerm || t.paymentTerm,
     } : t));
     setSelected(null); setRemarks(''); setEditTerm('');
-    setMsg(`✅ Payment terms ${action === 'approve' ? 'approved' : 'rejected'} successfully.`);
+    setMsg(` Payment terms ${action === 'approve' ? 'approved' : 'rejected'} successfully.`);
   };
 
   const statusBadge = { APPROVED: 'badge-approved', PENDING: 'badge-pending', REJECTED: 'badge-rejected' };
@@ -53,16 +53,16 @@ const PaymentTerms = () => {
       </div>
 
       <div className="alert alert-info mb-4">
-        💡 Finance Team must approve payment terms before a contract becomes ACTIVE. Rejected terms must be renegotiated.
+         Finance Team must approve payment terms before a contract becomes ACTIVE. Rejected terms must be renegotiated.
       </div>
 
       {msg   && <div className="alert alert-success">{msg}</div>}
       {error && <div className="alert alert-warning">{error}</div>}
 
-      {loading && <div className="alert alert-info">⏳ Loading payment terms...</div>}
+      {loading && <div className="alert alert-info"> Loading payment terms...</div>}
 
       {!loading && terms.length === 0 && !error && (
-        <div className="card"><div className="empty-state"><div className="icon">💰</div><p>No payment terms to review. They will appear here when contracts are created.</p></div></div>
+        <div className="card"><div className="empty-state"><div className="icon"></div><p>No payment terms to review. They will appear here when contracts are created.</p></div></div>
       )}
 
       {['PENDING', 'APPROVED', 'REJECTED'].map(status => {
@@ -71,7 +71,7 @@ const PaymentTerms = () => {
         return (
           <div key={status} className="mb-6">
             <div style={{ fontWeight: 700, fontSize: '0.78rem', color: '#64748b', textTransform: 'uppercase', letterSpacing: 1, marginBottom: '0.75rem' }}>
-              {status === 'PENDING' ? '⏳' : status === 'APPROVED' ? '✅' : '❌'} {status} ({group.length})
+              {status === 'PENDING' ? '⏳' : status === 'APPROVED' ? '' : ''} {status} ({group.length})
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {group.map(t => (

@@ -45,9 +45,9 @@ const PerformanceLog = () => {
     try {
       await api.post('/vendors/performance', form);
       fetchLogs();
-      setMsg('✅ Performance evaluation submitted successfully.');
+      setMsg(' Performance evaluation submitted successfully.');
     } catch {
-      setMsg('❌ Failed to submit. Ensure vendor ID is valid.');
+      setMsg(' Failed to submit. Ensure vendor ID is valid.');
     }
     setShow(false);
     setForm({ vendorId: '', metric: 'DELIVERY_TIME', score: '', remarks: '' });
@@ -78,7 +78,7 @@ const PerformanceLog = () => {
         )}
       </div>
 
-      {msg   && <div className={`alert ${msg.startsWith('✅') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
+      {msg   && <div className={`alert ${msg.startsWith('') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
       {error && <div className="alert alert-warning">{error}</div>}
 
       {/* Vendor summary cards */}
@@ -156,7 +156,7 @@ const PerformanceLog = () => {
               ) : filtered.length === 0 ? (
                 <tr><td colSpan={6}>
                   <div className="empty-state">
-                    <div className="icon">📈</div>
+                    <div className="icon"></div>
                     <p>{logs.length === 0 ? 'No performance evaluations yet. Add your first evaluation above.' : 'No logs match the selected metric.'}</p>
                   </div>
                 </td></tr>

@@ -82,7 +82,7 @@ const VendorList = () => {
             type="text"
             className="form-input"
             style={{ width: 260 }}
-            placeholder="🔍 Search by company or email..."
+            placeholder=" Search by company or email..."
             value={search}
             onChange={e => setSearch(e.target.value)}
           />
@@ -118,7 +118,7 @@ const VendorList = () => {
               ) : filtered.length === 0 ? (
                 <tr><td colSpan={canApprove ? 7 : 6}>
                   <div className="empty-state">
-                    <div className="icon">🏢</div>
+                    <div className="icon"></div>
                     <p>{vendors.length === 0 ? 'No vendors registered yet. Register your first vendor!' : 'No vendors match your filters.'}</p>
                   </div>
                 </td></tr>
@@ -140,13 +140,19 @@ const VendorList = () => {
                           <button className="btn btn-primary btn-sm" onClick={() => updateStatus(v.id, 'start-review')}>▶ Start Review</button>
                         )}
                         {v.status === 'UNDER_REVIEW' && (
-                           <span className="text-muted text-xs" style={{marginRight: 10, alignSelf: 'center'}}>In Pipeline...</span>
+                           <span className="text-muted text-xs" style={{marginRight: 10, alignSelf: 'center'}}>In Pipeline — go to Onboarding Workflow</span>
                         )}
-                        {v.status !== 'REJECTED' && v.status !== 'BLACKLISTED' && (
+                        {v.status === 'APPROVED' && (
+                           <span className="text-xs" style={{color: '#10b981', fontWeight: 600}}>✓ Fully Approved</span>
+                        )}
+                        {v.status === 'REJECTED' && (
+                           <span className="text-xs" style={{color: '#ef4444', fontWeight: 600}}>✗ Rejected</span>
+                        )}
+                        {(v.status === 'REGISTERED' || v.status === 'UNDER_REVIEW') && (
                           <button className="btn btn-danger btn-sm" onClick={() => updateStatus(v.id, 'reject')}>✗ Reject</button>
                         )}
                         {canBlacklist && v.status !== 'BLACKLISTED' && (
-                          <button className="btn btn-warning btn-sm" onClick={() => updateStatus(v.id, 'blacklist')}>🚫</button>
+                          <button className="btn btn-warning btn-sm" onClick={() => updateStatus(v.id, 'blacklist')}></button>
                         )}
                       </div>
                     </td>

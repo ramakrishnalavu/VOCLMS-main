@@ -15,7 +15,7 @@ const buildTimeline = (vendor) => [
 ];
 
 const VendorTimeline = () => {
-  const [vendors, setVendors]   = useState([]);
+  const [vendors, setVendors]   = useState([]);  
   const [selected, setSelected] = useState(null);
   const [loading, setLoading]   = useState(true);
   const [error, setError]       = useState('');

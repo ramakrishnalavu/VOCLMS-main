@@ -123,11 +123,11 @@ const VendorDocuments = () => {
             </thead>
             <tbody>
               {loading ? (
-                <tr><td colSpan={canVerify ? 7 : 6}><div className="empty-state"><div className="icon">⏳</div><p>Loading documents...</p></div></td></tr>
+                <tr><td colSpan={canVerify ? 7 : 6}><div className="empty-state"><div className="icon"></div><p>Loading documents...</p></div></td></tr>
               ) : filtered.length === 0 ? (
                 <tr><td colSpan={canVerify ? 7 : 6}>
                   <div className="empty-state">
-                    <div className="icon">📄</div>
+                    <div className="icon"></div>
                     <p>{docs.length === 0 ? 'No documents uploaded yet.' : 'No documents match selected filter.'}</p>
                   </div>
                 </td></tr>
@@ -144,8 +144,8 @@ const VendorDocuments = () => {
                       <div className="flex gap-1">
                         {doc.verificationStatus === 'PENDING' && (
                           <>
-                            <button className="btn btn-success btn-sm" onClick={() => handleVerify(doc.id, 'verify')}>✓ Verify</button>
-                            <button className="btn btn-danger btn-sm" onClick={() => handleVerify(doc.id, 'reject')}>✗ Reject</button>
+                            <button className="btn btn-success btn-sm" onClick={() => handleVerify(doc.id, 'verify')}> Verify</button>
+                            <button className="btn btn-danger btn-sm" onClick={() => handleVerify(doc.id, 'reject')}> Reject</button>
                           </>
                         )}
                       </div>

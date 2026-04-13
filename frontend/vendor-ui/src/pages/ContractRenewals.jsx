@@ -89,9 +89,9 @@ const ContractRenewals = () => {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.5rem' }}>
         {[
-          { label: '🔴 Within 7 days', count: critical.length, color: '#ef4444' },
-          { label: '🟠 Within 15 days', count: urgent.length, color: '#f97316' },
-          { label: '🟡 Within 30 days', count: warning.length, color: '#f59e0b' },
+          { label: ' Within 7 days', count: critical.length, color: '#ef4444' },
+          { label: ' Within 15 days', count: urgent.length, color: '#f97316' },
+          { label: ' Within 30 days', count: warning.length, color: '#f59e0b' },
         ].map(s => (
           <div key={s.label} className="stat-card" style={{ borderTop: `4px solid ${s.color}` }}>
             <div style={{ fontSize: '2rem', fontWeight: 800, color: s.color }}>{s.count}</div>
@@ -102,35 +102,35 @@ const ContractRenewals = () => {
 
       <div className="card mb-4" style={{ padding: '1rem 1.5rem', background: '#f8fafc' }}>
         <div className="flex gap-4 flex-wrap">
-          <span className="fw-600 text-sm">📅 Auto-Reminder Policy:</span>
-          <span className="text-sm text-muted">📧 30 days — Initial notice</span>
-          <span className="text-sm text-muted">📧 15 days — Urgent follow-up</span>
-          <span className="text-sm text-muted">📧 7 days — Critical alert to Finance & Admin</span>
+          <span className="fw-600 text-sm"> Auto-Reminder Policy:</span>
+          <span className="text-sm text-muted"> 30 days — Initial notice</span>
+          <span className="text-sm text-muted"> 15 days — Urgent follow-up</span>
+          <span className="text-sm text-muted"> 7 days — Critical alert to Finance & Admin</span>
         </div>
       </div>
 
-      {loading && <div className="alert alert-info">⏳ Loading contracts...</div>}
+      {loading && <div className="alert alert-info"> Loading contracts...</div>}
       {error && <div className="alert alert-warning">{error}</div>}
 
       {!loading && expiring.length === 0 && (
-        <div className="card"><div className="empty-state"><div className="icon">✅</div><p>{contracts.length === 0 ? 'No contracts found. Create contracts for your approved vendors.' : 'No contracts expiring in the next 30 days. All good!'}</p></div></div>
+        <div className="card"><div className="empty-state"><div className="icon"></div><p>{contracts.length === 0 ? 'No contracts found. Create contracts for your approved vendors.' : 'No contracts expiring in the next 30 days. All good!'}</p></div></div>
       )}
 
       {critical.length > 0 && (
         <div className="mb-4">
-          <div style={{ fontWeight: 700, fontSize: '0.85rem', color: '#ef4444', textTransform: 'uppercase', letterSpacing: 1, marginBottom: '0.5rem' }}>🔴 Critical — Expires Within 7 Days</div>
+          <div style={{ fontWeight: 700, fontSize: '0.85rem', color: '#ef4444', textTransform: 'uppercase', letterSpacing: 1, marginBottom: '0.5rem' }}> Critical — Expires Within 7 Days</div>
           {critical.map(c => <RenewalCard key={c.id} contract={c} />)}
         </div>
       )}
       {urgent.length > 0 && (
         <div className="mb-4">
-          <div style={{ fontWeight: 700, fontSize: '0.85rem', color: '#f97316', textTransform: 'uppercase', letterSpacing: 1, marginBottom: '0.5rem' }}>🟠 Urgent — Expires Within 15 Days</div>
+          <div style={{ fontWeight: 700, fontSize: '0.85rem', color: '#f97316', textTransform: 'uppercase', letterSpacing: 1, marginBottom: '0.5rem' }}> Urgent — Expires Within 15 Days</div>
           {urgent.map(c => <RenewalCard key={c.id} contract={c} />)}
         </div>
       )}
       {warning.length > 0 && (
         <div className="mb-4">
-          <div style={{ fontWeight: 700, fontSize: '0.85rem', color: '#f59e0b', textTransform: 'uppercase', letterSpacing: 1, marginBottom: '0.5rem' }}>🟡 Warning — Expires Within 30 Days</div>
+          <div style={{ fontWeight: 700, fontSize: '0.85rem', color: '#f59e0b', textTransform: 'uppercase', letterSpacing: 1, marginBottom: '0.5rem' }}>Warning — Expires Within 30 Days</div>
           {warning.map(c => <RenewalCard key={c.id} contract={c} />)}
         </div>
       )}

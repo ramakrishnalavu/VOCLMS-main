@@ -46,9 +46,9 @@ const ContractList = () => {
       };
       await api.post(`/contracts/${form.vendorId}`, payload);
       fetchContracts();
-      setMsg('✅ Contract created successfully as DRAFT.');
+      setMsg(' Contract created successfully as DRAFT.');
     } catch {
-      setMsg('❌ Failed to create contract. Ensure vendor is APPROVED.');
+      setMsg(' Failed to create contract. Ensure vendor is APPROVED.');
     }
     setShowNew(false);
     setForm({ vendorId: '', contractNumber: '', contractType: 'SERVICE', startDate: '', endDate: '', renewalType: 'NO_RENEW', value: '' });
@@ -106,13 +106,13 @@ const ContractList = () => {
         <span style={{marginLeft: '10px'}} className="badge badge-rejected">/ REJECTED</span>
       </div>
 
-      {msg   && <div className={`alert ${msg.startsWith('✅') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
+      {msg   && <div className={`alert ${msg.startsWith('') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
       {error && <div className="alert alert-warning">{error}</div>}
 
       {showNew && (
         <div className="card mb-4">
           <div className="card-title mb-4">Create New Contract</div>
-          <div className="alert alert-info mb-4">⚠️ Contracts can only be created for APPROVED vendors.</div>
+          <div className="alert alert-info mb-4"> Contracts can only be created for APPROVED vendors.</div>
           <form onSubmit={handleCreate}>
             <div className="form-grid">
               <div className="form-group">
@@ -183,7 +183,7 @@ const ContractList = () => {
               ) : filtered.length === 0 ? (
                 <tr><td colSpan={canApprove ? 9 : 8}>
                   <div className="empty-state">
-                    <div className="icon">📋</div>
+                    <div className="icon"></div>
                     <p>{contracts.length === 0 ? 'No contracts created yet. Contracts can only be made for APPROVED vendors.' : 'No contracts match selected filter.'}</p>
                   </div>
                 </td></tr>

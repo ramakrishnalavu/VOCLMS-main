@@ -5,21 +5,21 @@ import { NavLink, useNavigate } from 'react-router-dom';
 const NAV_CONFIG = {
   ADMIN: [
     { section: 'Overview',   items: [
-      { label: 'Dashboard',            icon: '📊', to: '/dashboard/stats' },
-      { label: 'Vendor Timeline',      icon: '🗺️', to: '/dashboard/timeline' },
+      { label: 'Dashboard',            icon: '', to: '/dashboard/stats' },
+      { label: 'Vendor Timeline',      icon: '', to: '/dashboard/timeline' },
     ]},
     { section: 'Vendors',    items: [
-      { label: 'All Vendors',          icon: '🏢', to: '/dashboard/vendors' },
-      { label: 'Register Vendor',      icon: '➕', to: '/dashboard/register' },
-      { label: 'Compliance Documents', icon: '📄', to: '/dashboard/documents' },
+      { label: 'All Vendors',          icon: '', to: '/dashboard/vendors' },
+      { label: 'Register Vendor',      icon: '', to: '/dashboard/register' },
+      { label: 'Compliance Documents', icon: '', to: '/dashboard/documents' },
     ]},
     { section: 'Workflow',   items: [
-      { label: 'Onboarding Workflow',  icon: '🔄', to: '/dashboard/workflow' },
+      { label: 'Onboarding Workflow',  icon: '', to: '/dashboard/workflow' },
     ]},
     { section: 'Contracts',  items: [
-      { label: 'Contracts',            icon: '📋', to: '/dashboard/contracts' },
-      { label: 'Renewal Center',       icon: '🔔', to: '/dashboard/renewals' },
-      { label: 'Payment Terms',        icon: '💰', to: '/dashboard/payment-terms' },
+      { label: 'Contracts',            icon: '', to: '/dashboard/contracts' },
+      { label: 'Renewal Center',       icon: '', to: '/dashboard/renewals' },
+      { label: 'Payment Terms',        icon: '', to: '/dashboard/payment-terms' },
     ]},
     { section: 'Reports',    items: [
       { label: 'Performance Logs',     icon: '📈', to: '/dashboard/performance' },
@@ -28,51 +28,51 @@ const NAV_CONFIG = {
 
   VENDOR: [
     { section: 'My Account', items: [
-      { label: 'Register Company',     icon: '➕', to: '/dashboard/register' },
-      { label: 'Upload Documents',     icon: '📄', to: '/dashboard/documents' },
-      { label: 'Onboarding Status',    icon: '🔄', to: '/dashboard/workflow' },
-      { label: 'My Contracts',         icon: '📋', to: '/dashboard/contracts' },
-      { label: 'Lifecycle Tracker',    icon: '🗺️', to: '/dashboard/timeline' },
+      { label: 'Register Company',     icon: '', to: '/dashboard/register' },
+      { label: 'Upload Documents',     icon: '', to: '/dashboard/documents' },
+      { label: 'Onboarding Status',    icon: '', to: '/dashboard/workflow' },
+      { label: 'My Contracts',         icon: '', to: '/dashboard/contracts' },
+      { label: 'Lifecycle Tracker',    icon: '', to: '/dashboard/timeline' },
     ]},
   ],
 
   PROCUREMENT_OFFICER: [
     { section: 'Review Applications', items: [
-      { label: 'Vendor Applications',  icon: '🏢', to: '/dashboard/vendors' },
-      { label: 'Onboarding Workflow',  icon: '🔄', to: '/dashboard/workflow' },
+      { label: 'Vendor Applications',  icon:' ', to: '/dashboard/vendors' },
+      { label: 'Onboarding Workflow',  icon: '', to: '/dashboard/workflow' },
     ]},
     { section: 'Compliance', items: [
-      { label: 'Compliance Documents', icon: '📄', to: '/dashboard/documents' },
+      { label: 'Compliance Documents', icon: '', to: '/dashboard/documents' },
     ]},
     { section: 'Contracts', items: [
-      { label: 'Contracts',            icon: '📋', to: '/dashboard/contracts' },
-      { label: 'Renewal Center',       icon: '🔔', to: '/dashboard/renewals' },
+      { label: 'Contracts',            icon: '', to: '/dashboard/contracts' },
+      { label: 'Renewal Center',       icon: '', to: '/dashboard/renewals' },
     ]},
   ],
 
   LEGAL_TEAM: [
     { section: 'Compliance Verification', items: [
-      { label: 'Verify Documents',     icon: '📄', to: '/dashboard/documents' },
-      { label: 'Vendor Applications',  icon: '🏢', to: '/dashboard/vendors' },
-      { label: 'Onboarding Workflow',  icon: '🔄', to: '/dashboard/workflow' },
+      { label: 'Verify Documents',     icon: '', to: '/dashboard/documents' },
+      { label: 'Vendor Applications',  icon: '', to: '/dashboard/vendors' },
+      { label: 'Onboarding Workflow',  icon: '', to: '/dashboard/workflow' },
     ]},
     { section: 'Contracts', items: [
-      { label: 'Contracts',            icon: '📋', to: '/dashboard/contracts' },
+      { label: 'Contracts',            icon: '', to: '/dashboard/contracts' },
     ]},
   ],
 
   FINANCE_TEAM: [
     { section: 'Finance Review', items: [
-      { label: 'Payment Terms',        icon: '💰', to: '/dashboard/payment-terms' },
-      { label: 'Onboarding Workflow',  icon: '🔄', to: '/dashboard/workflow' },
+      { label: 'Payment Terms',        icon: '', to: '/dashboard/payment-terms' },
+      { label: 'Onboarding Workflow',  icon: '', to: '/dashboard/workflow' },
     ]},
     { section: 'Contracts', items: [
-      { label: 'Contracts',            icon: '📋', to: '/dashboard/contracts' },
-      { label: 'Renewal Center',       icon: '🔔', to: '/dashboard/renewals' },
+      { label: 'Contracts',            icon: '', to: '/dashboard/contracts' },
+      { label: 'Renewal Center',       icon:'', to: '/dashboard/renewals' },
     ]},
     { section: 'Reports', items: [
-      { label: 'Performance Logs',     icon: '📈', to: '/dashboard/performance' },
-      { label: 'Vendor Directory',     icon: '🏢', to: '/dashboard/vendors' },
+      { label: 'Performance Logs',     icon: '', to: '/dashboard/performance' },
+      { label: 'Vendor Directory',     icon: '', to: '/dashboard/vendors' },
     ]},
   ],
 };
@@ -141,7 +141,7 @@ const Sidebar = () => {
           </div>
         </div>
         <button className="btn btn-logout" onClick={handleLogout}>
-          🚪 Sign Out
+           Sign Out
         </button>
       </div>
     </aside>

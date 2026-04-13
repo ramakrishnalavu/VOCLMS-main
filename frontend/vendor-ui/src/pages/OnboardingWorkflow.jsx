@@ -126,11 +126,11 @@ const OnboardingWorkflow = () => {
             </thead>
             <tbody>
               {loading ? (
-                <tr><td colSpan={8}><div className="empty-state"><div className="icon">⏳</div><p>Loading workflows...</p></div></td></tr>
+                <tr><td colSpan={8}><div className="empty-state"><div className="icon"></div><p>Loading workflows...</p></div></td></tr>
               ) : filtered.length === 0 ? (
                 <tr><td colSpan={8}>
                   <div className="empty-state">
-                    <div className="icon">🔄</div>
+                    <div className="icon"></div>
                     <p>{workflows.length === 0 ? 'No vendor workflows started yet. Vendors must be registered first.' : 'No workflows match the selected stage.'}</p>
                   </div>
                 </td></tr>

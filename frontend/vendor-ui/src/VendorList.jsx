@@ -29,7 +29,7 @@ function VendorList() {
     fetchVendors();
   };
 
-  // 🔍 FILTER LOGIC
+  //  FILTER LOGIC
   const filteredVendors = vendors.filter((v) => {
     return (
       v.companyName.toLowerCase().includes(search.toLowerCase()) &&
@@ -37,7 +37,7 @@ function VendorList() {
     );
   });
 
-  // 📊 STATS
+  //  STATS
   const total = vendors.length;
   const approved = vendors.filter(v => v.status === "APPROVED").length;
   const rejected = vendors.filter(v => v.status === "REJECTED").length;
@@ -47,7 +47,7 @@ function VendorList() {
     <div style={{ padding: "20px" }}>
       <h2 style={{ textAlign: "center" }}>Vendor Dashboard</h2>
 
-      {/* 📊 STATS */}
+      {/*  STATS */}
       <div style={{ display: "flex", justifyContent: "center", gap: "20px", margin: "20px" }}>
         <div style={card}>Total: {total}</div>
         <div style={{ ...card, background: "green", color: "white" }}>Approved: {approved}</div>
@@ -55,7 +55,7 @@ function VendorList() {
         <div style={{ ...card, background: "orange", color: "white" }}>Pending: {pending}</div>
       </div>
 
-      {/* 🔍 SEARCH + FILTER */}
+      {/*  SEARCH + FILTER */}
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
         <input
           placeholder="Search by company..."
@@ -76,7 +76,7 @@ function VendorList() {
         </select>
       </div>
 
-      {/* 📋 TABLE */}
+      {/* TABLE */}
       <table style={table}>
         <thead style={{ background: "#2563eb", color: "white" }}>
           <tr>
@@ -132,7 +132,7 @@ function VendorList() {
   );
 }
 
-// 🎨 STYLES
+//  STYLES
 const card = {
   padding: "10px 20px",
   borderRadius: "8px",

@@ -29,10 +29,10 @@ const VendorRegistration = () => {
     setMessage(''); setError(''); setLoading(true);
     try {
       await api.post('/vendors/register', formData);
-      setMessage('✅ Vendor registered successfully! Status: REGISTERED');
+      setMessage(' Vendor registered successfully! Status: REGISTERED');
       setFormData({ companyName: '', registrationNumber: '', panNumber: '', address: '', email: '', phone: '', vendorType: 'INDIVIDUAL', category: 'IT' });
     } catch (err) {
-      setError('❌ Failed to register vendor. Please check all fields and try again.');
+      setError(' Failed to register vendor. Please check all fields and try again.');
     } finally {
       setLoading(false);
     }
@@ -115,7 +115,7 @@ const VendorRegistration = () => {
 
           <div className="flex gap-3">
             <button type="submit" className="btn btn-primary" disabled={loading}>
-              {loading ? '⏳ Submitting...' : '✅ Register Vendor'}
+              {loading ? ' Submitting...' : ' Register Vendor'}
             </button>
             <button type="button" className="btn btn-ghost" onClick={() => setFormData({ companyName: '', registrationNumber: '', panNumber: '', address: '', email: '', phone: '', vendorType: 'INDIVIDUAL', category: 'IT' })}>
               🗑 Clear Form
